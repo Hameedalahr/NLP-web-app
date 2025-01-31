@@ -1,0 +1,144 @@
+/* Light Mode */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --container-bg: #fff;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --output-bg: #e9ecef;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #1e1e2e;
+    --text-color: #fff;
+    --container-bg: #282a36;
+    --button-bg: #50fa7b;
+    --button-hover: #27ae60;
+    --output-bg: #44475a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container {
+    max-width: 90%;
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Theme Toggle Button */
+.toggle-theme {
+    background: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.toggle-theme:hover {
+    background: var(--button-hover);
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 100px;
+    background: var(--output-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Output Section */
+.output-container {
+    background: var(--output-bg);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+h2 {
+    text-align: left;
+}
+
+pre {
+    background: var(--output-bg);
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    textarea {
+        height: 80px;
+        font-size: 14px;
+    }
+}
